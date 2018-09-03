@@ -1,0 +1,50 @@
+First question:
+
+SELECT
+    *,
+    MAX(price+security_deposit+cleaning_fee) TotalPrice
+FROM
+    listings_1
+	
+	/*This shows the most expensive listing among all in Boston. From the listing we can see that this is a 2B2B apartment with nightly 
+	price $975. Even though the host is a verified Airbnb host, but this place has zero reviews and it does not have any available 
+	date in the future*/
+
+
+
+
+
+Second Question:
+
+SELECT neighbourhood,SUM(number_of_reviews) TotalReviews
+From listings_1
+GROUP BY neighbourhood
+ORDER BY TotalReviews DESC
+
+/*The most popular neighbourhood called Dorchester*/
+
+
+
+
+
+
+Second part of the Third Question:
+select 
+strftime('%m', date) as Month,
+avg(replace(price,'$','')) as price
+from calendar 
+where available = 't'
+GROUP BY Month 
+ORDER BY price desc
+
+
+WITH availability
+as (
+SELECT(CASE WHEN available = 't' THEN 1 ELSE 0 END) availabilities,available, strftime('%m',date) as Month
+FROM calendar
+)
+SELECT a.Month,SUM(a.availabilities) TotalAval
+FROM availability a
+GROUP BY a.Month 
+ORDER BY TotalAval desc
+limit 1

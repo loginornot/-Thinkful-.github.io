@@ -1,0 +1,18 @@
+Drill#1
+select Date,max(MaxTemperatureF) MaxTemperature,ZIP
+from weather
+group by ZIP
+
+Drill #2
+select count(trip_id) NumberOftrips,start_station
+from trips
+group by start_station
+
+Drill #3
+select *, min(duration)
+from trips
+
+Drill #4
+select end_station, avg(duration) AvgDuration
+from trips
+group by end_station
