@@ -1,0 +1,18 @@
+1. Separate visitors into two catagories, converted and not converted. Under each catagory, using visitors'session info to see what products they have seen on websites. Then divide this further into widgets, doodads, and fizzbangs. Therefore we can see which product is the most popular one among those three and which one is the least popular one so we can feature that product more in our new advertisement.
+
+2.Merge marketing spend data with clients onborading data. Within each week, find out the number of clients who just signup, sighup and choose a plan, and who did all three steps. Then compare this number with weekly marketing spend on a long term trend to see if markting spending is the main cause. If it is not, then using those timestamp to see if it is caused by other events, such as saturation rate of the market etc.
+
+3. First of all, add a availability filter to the search results. Among those hotel that are available, add a feature to allow customers to rank them by descending price. However, by default, we can rank those hotels by popularity(the highest purchase to visits ratio), and show those numbers next to the hotel name(eg: 130 people visited, 96 booked). Also show the number of booking during the last 24 hour. If a hotel's rooms gone fast, then it must be good. This also could be a ranking option available for customers.
+
+4.First of all, groupby the user data by timestamp, and using dot plot to show number of entries for each timestamp so we know during what time of a day, people like to use social network. Second, using bar plot or line plot to show the length of sessions for each timestamp to see when people like to spend longer time on social network. If two plot matches(during specific time, there are more logins and people spend longer time on social network), then we can start working on why churn happens during that time period. If two plot does not matches(time period for more logins is differ from time period for longer sessions), then we can work on those two separated groups of people.  
+
+
+
+
+
+
+
+
+
+
+
