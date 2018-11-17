@@ -16,4 +16,7 @@ with open('liquor_dataframe.pkl','rb') as input_pkl_file:
     df = pickle.load(input_pkl_file)
 
 # append data to dataframe
-df2_pickle['new column'] = df2_pickle['City'].map(lower)
+df2_pickle['lowercase_city'] = df2_pickle['City'].map(lower)
+
+df2_pickle.columns
+# ['City', 'lowercase_city', …]
